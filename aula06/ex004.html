@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX004</title>
+    <style>
+        body {
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var n1 =  1545.5
+        var nome = window.prompt('Qual é seu nome')
+        document.write(`Olá, <strong>${nome}</strong>!!! \nSeu nome tem ${nome.length} letras</br>`)
+        document.write(`Seu nome em maiusculo é ${nome.toUpperCase()}</br>`)
+        document.write(`Seu nome em minusculo é ${nome.toLowerCase()}</br>`)
+        document.write(` ${n1.toFixed(2).replace('.',',')}</br>`)
+        document.write(` ${n1.toLocaleString('pt-BR')}</br>`)
+        document.write(` ${n1.toFixed(2).toLocaleString('pt-BR')}</br>`)
+        document.write(` ${n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</br>`)
+        document.write(` ${n1.toLocaleString('en', {style: 'currency', currency: 'USD'})}</br>`)
+        document.write(` ${n1.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})}</br>`)
+
+    
+    </script>
+    
+</body>
+</html>
