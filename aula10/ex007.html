@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+    <style>
+        body {
+            background: rgb(216, 90, 111);
+            font: italic 20pt caption;
+        }
+        input {
+            font: normal 18pt Arial;
+            width: 100px;
+            margin-bottom: 15px;
+        }
+        div#res {
+            margin-top: 30px;
+        }
+        div#resul {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> <strong>+</strong>
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="somar" onclick="somar()">
+    <div> </div>    
+    <input type="number" name="txtn3" id="txtn3"> <strong>-</strong>
+    <input type="number" name="txtn4" id="txtn4">
+    <input type="button" value="Subtrair" onclick="subtrair()">
+    <div id="res"><strong>Resultado</strong></div>
+
+    <script>
+        function somar() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.querySelector('input#txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1/n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>`
+
+            //var s = Number(tn1.value) + Number(tn2.value)
+        }
+        function subtrair() {
+            var tn3 = window.document.getElementById('txtn3')
+            var tn4 = window.document.querySelector('input#txtn4')
+            var res = window.document.getElementById('res')
+            var n3 = Number(tn3.value)
+            var n4 = Number(tn4.value)
+            var s = n3-n4
+            res.innerHTML = `A Subtração entre ${n3} e ${n4} é igual a <strong>${s}</strong>`
+            }
+            
+    </script>
+</body>
+</html>
