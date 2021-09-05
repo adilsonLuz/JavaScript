@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votação</title>
+</head>
+<body>
+    <h1>Confirmação de Votação</h1>
+    Digite sua idade: <input type="number" name="txtIdade" id="txtIdade">
+    <input type="button" value="buscar" onclick="votar()">
+    <div id="res">
+        
+    </div>
+    <script>
+        function votar(){
+            var txti = window.document.querySelector("input#txtIdade")
+            var res = window.document.querySelector("div#res")
+            var idade = Number(txti.value)
+
+            res.innerHTML = `<p>Você tem <strong>${idade}</strong> anos</p>`
+            if (idade < 16) {
+                res.innerHTML = `<p>Você <strong>não vota</strong></p>`
+            } else if(idade < 18 || idade >= 65) {
+                res.innerHTML = `<p>Seu voto é <strong>opicional</strong></p>`
+            } else {
+                res.innerHTML = `<p>Seu voto é <strong>compulsório</strong></p>`
+            }
+
+        }
+    </script>
+
+</body>
+</html>
