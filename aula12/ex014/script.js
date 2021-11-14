@@ -4,7 +4,7 @@ var img = window.document.getElementById('imagem')
 
 var data = new Date
 
-var hora = 20//data.getHours()
+var hora = 19//data.getHours()
 var min = 30//data.getMinutes()
 var sec = 22//data.getSeconds()
 
